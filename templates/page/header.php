@@ -43,6 +43,8 @@
     <!-- Disable Skype browser-plugin -->
     <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
 
+    <link rel="stylesheet" href="https://use.typekit.net/bhu4hrp.css">
+
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> >
@@ -52,27 +54,25 @@
     <span class="c-line-vertical"></span>
     <!-- header inner-->
     <div class="c-container-wide c-line-top c-line-bottom">
-        <div class="c-container c-container-no-padding c-header-inner">
+        <div class="c-container-wide c-container-no-padding c-header-inner">
+
+            <div class="c-header-social">
+                <?php
+                $socialmedia_accounts   = apply_filters( 'c_get_option', 'socialmedia_accounts' );
+                ?>
+                <a class="" style="width:40px;height:40px;display:inline-block;" href="https://www.instagram.com/malhaus_biel_bienne/" target="_blank"><img src="<?= get_stylesheet_directory_uri(); ?>/images/instagram.jpg" /></a>
+
+            </div>
+
             <div class="c-header-logo">
                 <a href="<?= get_home_url(); ?>">
                     <img src="<?=  do_shortcode("[c_option key='logo_image']"); ?>" alt="<?=  do_shortcode("[c_option key='company_title']"); ?>" />
                 </a>
             </div>
 
-            <nav class="c-main-nav">
-                <!-- navigation -->
-				<?php wp_nav_menu(
-					array(
-						'theme_location' => 'header-menu',
-						'container'      => false,
-						'menu_class'     => 'c-main-nav-list',
-					)
-				); ?>
-            </nav>
-
             <!-- offcanvas trigger-->
-            <a href="#open-navigation" class="c-offcanvas-trigger c-offcanvas-trigger-open">
-                <span class="c-hide-visually"><?= __( 'Menü öffnen', 'neofluxe' ); ?></span>
+            <a href="#open-navigation" class="c-offcanvas-trigger">
+            <img src="<?= get_stylesheet_directory_uri(); ?>/images/menu.jpg" />
             </a>
         </div>
     </div>

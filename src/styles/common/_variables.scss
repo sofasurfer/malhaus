@@ -7,7 +7,7 @@
 /* @import must be at top of file, otherwise CSS will not work */
 /* @import url('//hello.myfonts.net/count/426563'); */
 
-$font-stack-default: 'Roboto', 'Arial', 'Helvetica', sans-serif;
+$font-stack-default: 'lato', 'sans-serif';
 
 /* ==========================================================================
    Fallbacks sass Variablen
@@ -21,8 +21,8 @@ $text-color-link: #1D1D1B; /* dark grey */
 /* background */
 $bg-content: #fff;
 $bg-dark: #1D1D1B; /* dark grey */
-$bg-light: #f9f9f9; /* light grey */
-$color-highlight: #2e1aa9; /* blue */
+$bg-light: #ffffff; /* light grey */
+$color-highlight: #1A08F5; /* blue */
 
 /* line-colors */
 $border-basic: #ebebeb;
@@ -55,7 +55,7 @@ $form-initial: #1D1D1B;
 
 :root {
     /* fonts */
-    --font-stack-default: 'Roboto', 'Arial', 'Helvetica', sans-serif;
+    --font-stack-default: 'lato', 'sans-serif';
     --font-weight-normal: 400;
     --font-weight-bold: 700;
     
@@ -68,7 +68,7 @@ $form-initial: #1D1D1B;
     /* colors / background */
     --bg-content: #fff;
     --bg-dark: #1D1D1B; /* dark grey */
-    --bg-light: #f9f9f9; /* light grey */
+    --bg-light: #ffffff; /* light grey */
     --color-highlight: #2e1aa9; /* blue */
     
     /* lines */

@@ -3,8 +3,9 @@
    ========================================================================== */
 .c-header {
 	background-color: $bg-light;
-    background-color: var(--bg-light);
 	z-index: 10;
+	height: 156px;
+	margin-top:2rem;
 }
 
 .c-header-inner {
@@ -12,17 +13,26 @@
 	display: flex;
 	flex-flow: row;
 	justify-content: space-between;
+	align-items: center;
 }
 
 
 .c-header-logo {
 	position: relative;
-	width: 200px;
-	height: 40px;
+	width: 420px;
+	height: 97px;
+	text-align: center;
 }
 
 .c-header-logo a {
 	display: block;
+}
+
+.c-header-social{
+	padding-left: $spacing-s;
+    padding-right: $spacing-s;
+    padding-left: var(--spacing-s);
+    padding-right: var(--spacing-s);
 }
 
 /* ==========================================================================

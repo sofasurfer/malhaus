@@ -3,18 +3,22 @@
    ========================================================================== */
 
 .c-offcanvas-trigger {
-	position: absolute;
+	position: relative;
 	display: block;
 	top: 0;
 	right: $grid-container;
     right: var(--grid-container);
-	width: 40px;
-	height: 40px;
+	width: 132;
+	height: 110px;
 	margin: 0;
 	color: transparent;
 	transform: perspective(1px) translateZ(0);
 	transition: all 0.2s ease-in-out;
 	overflow: hidden;
+
+	img{
+		height: 110px;
+	}
 }
 
 .c-offcanvas-trigger-open {

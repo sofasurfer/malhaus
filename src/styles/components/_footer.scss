@@ -3,40 +3,52 @@
    ========================================================================== */
 
 .c-footer {
+    color: #FFFCFC;
 	padding-top: $spacing-s;
     padding-bottom: $spacing-s;
     padding-top: var(--spacing-s);
     padding-bottom: var(--spacing-s);
-    background-color: $bg-light;
-    background-color: var(--bg-light);
+
+	padding-left: $spacing-s;
+    padding-right: $spacing-s;
+    padding-left: var(--spacing-s);
+    padding-right: var(--spacing-s);
+
+    background: var(--unnamed-color-1a08f5) 0% 0% no-repeat padding-box;
+    background: $color-highlight 0% 0% no-repeat padding-box;
+
 }
 
 .c-footer-disclaimer {
-	padding-top: 1.5em;
+	padding-top: 0;
 }
 
 .c-footer-disclaimer-list {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+    text-align: left;
+    margin-left:150px;
+    padding-top: 0px;
+    margin-top: 0px;
+    margin-bottom: 1rem;
 }
 
 .c-footer-disclaimer-list li {
-	display: inline-block;
-}
-
-.c-footer-disclaimer-list > li + li {
+	display: block;
 	padding-left: 10px;
 }
 
+
 .c-footer a,
 .c-footer a:visited {
-	color: $text-color;
-    color: var(--text-color);
+	color: $text-color-light;
+    color: var(--text-color-light);
 }
 
 .c-footer a:hover,
 .c-footer a:focus {
-	color: $text-color;
-    color: var(--text-color);
+	color: $text-color-light;
+    color: var(--text-color-light);
+    text-decoration: underline;
 }

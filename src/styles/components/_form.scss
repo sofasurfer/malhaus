@@ -26,6 +26,19 @@ input:-webkit-autofill:active {
     padding-bottom: var(--spacing-s);
 }
 
+.c-newsletter{
+    color: #FFFCFC;
+    padding: 0.2rem 0.5rem 0.4rem;
+    margin: 0.8rem 0 0.8rem 0;
+    background-color: transparent;
+    border: solid 1px #FFFCFC;
+
+    &::placeholder {
+        color: #FFFCFC;
+        opacity: 1;
+    }
+}
+
 /* ==========================================================================
    formfields
    ========================================================================== */
