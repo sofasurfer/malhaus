@@ -17,6 +17,7 @@ h5,
 h6 {
 	margin: 0;
 	padding: 0;
+	color: $color-highlight;
 }
 
 h1,
@@ -31,14 +32,14 @@ h2,
 .c-h2 {
 	padding-bottom: .5em;
 	line-height: 1.2;
-	font-size: 2.22rem; /* 40px */
+	font-size: 2rem; /* 40px */
 	font-weight: var(--font-weight-bold);
 }
 
 h3,
 .c-h3 {
 	line-height: 1.5;
-	font-size: 1.33rem;
+	font-size: 1.6rem;
 	padding-bottom: 0.5em;
 	font-weight: var(--font-weight-bold);
 }
@@ -74,6 +75,30 @@ h3,
 .c-lead {
 	font-size: 1.33rem;
 	line-height: 1.33;
+	color: $color-highlight;
+	margin-bottom: 1.5em;
+	font-weight: $font-weight-big;
+}
+
+.c-lead-small {
+	font-size: 1rem;
+	line-height: 1.33;
+	color: $color-highlight;
+	font-weight: $font-weight-big;
+}
+
+.c-alert{
+	padding: 1rem;
+	border-radius: 53px;
+	margin-bottom: 1.5em;
+	color: $color-highlight;
+	font-weight: $font-weight-big;
+	background-color: $color-alert;
+}
+
+.c-teaser-text{
+	font-size: 1rem;
+	color: $color-highlight;
 }
 
 .c-text-small,

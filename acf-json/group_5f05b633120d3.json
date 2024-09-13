@@ -149,6 +149,60 @@
             "mime_types": ""
         },
         {
+            "key": "field_66e42907510be",
+            "label": "Alert",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_66e428c1c964c",
+            "label": "Text",
+            "name": "alert_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Shown below header images, useful for important notifications",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_66e4292e510bf",
+            "label": "Link",
+            "name": "alert_link",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Optional link",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
             "key": "field_62836191e903c",
             "label": "SEO \/ Meta",
             "name": "",
@@ -225,5 +279,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1718201858
+    "modified": 1726228818
 }
