@@ -43,9 +43,7 @@ class PostListing {
 		Get Post Listings
 	*/
 	public function get_post_listings($fields) {
-        $post_type = $fields['posttype'];
         $has_selected_items = $fields['select'] ?? false;
-        $number_of_posts 	= $fields['number_of_posts'] ? $fields['number_of_posts'] : -1;
                 
         $args = array(
             'post_type'        => 'any',  
