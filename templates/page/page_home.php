@@ -19,59 +19,54 @@
 		?>
 		<?=  apply_filters('c_render_picturetag', $args); ?>		
 	</figure>
-	<div class="c-container-wide">
-	    <span class="c-deco c-deco-title"></span>
-	    <div class="c-container">
-            <div class="c-row">
-                <div class="c-col-12">
-                    <div class="c-box">
-                        <p class="c-lead"><?= get_field('acf_header_lead');?></p>
-                    </div>
+        <div class="c-row">
+            <div class="c-col-12">
+                <div class="c-box">
+                    <p class="c-lead"><?= get_field('acf_header_lead');?></p>
                 </div>
             </div>
-            <?php if(!empty(get_field('alert_text'))): ?>
-            <div class="c-row">
-                <div class="c-col-12">
-                    <div class="c-box">
-                        <p class="c-alert"><?= get_field('alert_text');?></p>
-                    </div>
+        </div>
+        <?php if(!empty(get_field('alert_text'))): ?>
+        <div class="c-row">
+            <div class="c-col-12">
+                <div class="c-box">
+                    <p class="c-alert"><a class="c-icon c-link-icon c-link-arrow" href=""><?= get_field('alert_text');?></a></p>
                 </div>
             </div>
-            <?php endif;?>
+        </div>
+        <?php endif;?>
 
 
-            <?php
-            // Get News
-            $args = array(
-                'post_type'      => 'post', // Can be 'post', 'page', or any custom post type
-                'posts_per_page' => 1,      // Limit to 1 post
-                'orderby'        => 'date', // Order by date
-                'order'          => 'DESC', // Latest post first
-            );
+        <?php
+        // Get News
+        $args = array(
+            'post_type'      => 'post', // Can be 'post', 'page', or any custom post type
+            'posts_per_page' => 1,      // Limit to 1 post
+            'orderby'        => 'date', // Order by date
+            'order'          => 'DESC', // Latest post first
+        );
 
-            $latest_posts = get_posts( $args );
+        $latest_posts = get_posts( $args );
 
-            if( $latest_posts ):
-            $news = $latest_posts[0]?>
-            <div class="c-row">
-                <div class="c-col-12">
-                    <h2><?= __('News','neofluxe');?></h2>
-                </div>
+        if( $latest_posts ):
+        $news = $latest_posts[0]?>
+        <div class="c-row c-margin-bottom">
+            <div class="c-col-12">
+                <h2><?= __('News','neofluxe');?></h2>
+            </div>
 
-                <div class="c-col-6">
-                    <?= get_the_post_thumbnail( $news,'full' );?>
-                </div>
+            <div class="c-col-6">
+                <?= get_the_post_thumbnail( $news,'full' );?>
+            </div>
 
-                <div class="c-col-6">
-                    <h3><?= get_the_title( $news );?></h3>
-                    <span class="c-lead-small"><?= get_field('lead',$news);?></span>
-                    <div class="c-teaser-text">
-                        <?= get_field('text',$news); ?>
-                    </div>
+            <div class="c-col-6 c-teaser-home">
+                <h3><?= get_the_title( $news );?></h3>
+                <span class="c-lead-small"><?= get_field('lead',$news);?></span>
+                <div class="c-teaser-text">
+                    <?= get_field('text',$news); ?>
                 </div>
             </div>
-            <?php endif;?>
+        </div>
+        <?php endif;?>
 
-	    </div>
-	</div>
 </div>

@@ -51,3 +51,37 @@
         border-color: var(--border-basic);
 	}
 }
+
+
+.c-accordion{
+    margin-bottom: 2rem;
+    
+    .c-accordion-container{
+
+        border-top: 4px solid $color-highlight;
+        padding: 1rem 0;
+
+        &:last-child{
+            border-bottom: 4px solid $color-highlight;
+        }
+
+        label{
+            color: $color-highlight;
+            font-size: 1rem;
+        }
+        .c-accordion-check{
+            display: none;
+        }
+
+        .c-accordion-content{
+            max-height: 0px;
+            overflow: hidden;
+        }
+
+        .c-accordion-check:checked ~ .c-accordion-content {
+            max-height: 9999px;
+            padding-top: 1rem;
+            transition: max-height .3s cubic-bezier(1,0,1,0);
+        }
+    }
+}

@@ -66,7 +66,7 @@ class WysiwygSettings {
 
 	public function c_tiny_mce_before_init( $settings ) {
 
-		$settings['block_formats'] = 'Paragraph=p;Heading 3=h3;Heading 4=h4;';
+		$settings['block_formats'] = 'Paragraph=p;Heading 2=h2;Heading 3=h3;Heading 4=h4;';
 		$style_formats             = array(
 			array(
 				'title'    => 'Lead',

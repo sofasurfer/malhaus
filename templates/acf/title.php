@@ -5,6 +5,6 @@ $title  = $fields['title'];
 $tag    = $fields['size'];
 ?>
 
-<div class="c-container c-title">
+<div class="c-container-wide c-title">
     <h2><?= $title ?></h2>
 </div>

@@ -44,48 +44,20 @@ class PostListing {
 	*/
 	public function get_post_listings($fields) {
         $post_type = $fields['posttype'];
-        if( $fields['manualselection'] ){
-            $has_selected_items = $fields['select'] ?? false;
-        }else{
-            $has_selected_items = false;
-        }
+        $has_selected_items = $fields['select'] ?? false;
         $number_of_posts 	= $fields['number_of_posts'] ? $fields['number_of_posts'] : -1;
-        
-        error_log( $number_of_posts );
-        
-        if ( $has_selected_items && count( $has_selected_items ) > 0 ) {
-            $args = array(
-                'post_type'        => $post_type,
-                'post_status'      => 'publish',
-                'post__in'         => $has_selected_items,
-                'posts_per_page'   => - 1,
-                'suppress_filters' => false,
-            );
-        }else{
-            $args = array(
-                'post_type'        => $post_type,
-                'post_status'      => 'publish',
-                'orderby'          => 'date',
-                'order'            => 'DESC',
-                'posts_per_page'   => $number_of_posts,
-                'suppress_filters' => false,
-            );
-        
-            if( !empty($fields['category'])){
-        
-                $args['tax_query'] = array(
-                    array(
-                        'taxonomy' => $fields['category']->taxonomy,
-                        'field' => 'slug',
-                        'terms' => $fields['category']->slug,
-                    ),
-                );
-            }
-        }
+                
+        $args = array(
+            'post_type'        => 'any',  
+            'post_status'      => 'publish',
+            'post__in'         => $has_selected_items,
+            'posts_per_page'   => - 1,
+            'suppress_filters' => false,
+        );
 
-        error_log(print_r($args,true));
         
         $posts = get_posts( $args );
+        
 
         if ( $has_selected_items && count( $has_selected_items ) > 0 ) {
             usort( $posts, function ( $a, $b ) use ( $has_selected_items ) {
@@ -93,8 +65,11 @@ class PostListing {
             } );
         }
         
+        error_log(print_r($args,true));
+
         return $posts;
 	}
+
 
 }
 

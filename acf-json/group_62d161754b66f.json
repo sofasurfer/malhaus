@@ -50,9 +50,82 @@
                 "layout_63a315b641e74": {
                     "key": "layout_63a315b641e74",
                     "name": "acf_element_wysiwyg",
-                    "label": "WYSIWYG | Text",
+                    "label": "TextBlock : WYSIWYG",
                     "display": "block",
                     "sub_fields": [
+                        {
+                            "key": "field_66e826d1b74dc",
+                            "label": "Image",
+                            "name": "image",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "20",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "ui": 1
+                        },
+                        {
+                            "key": "field_66e826ebb74dd",
+                            "label": "Image",
+                            "name": "image_id",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_66e826d1b74dc",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "40",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "id",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "preview_size": "medium"
+                        },
+                        {
+                            "key": "field_66e827bb23dd3",
+                            "label": "BG Color",
+                            "name": "bgcolor",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "40",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
                         {
                             "key": "field_63a315cd41e79",
                             "label": "Editor",
@@ -70,7 +143,7 @@
                             "default_value": "",
                             "tabs": "all",
                             "toolbar": "neofluxe_default",
-                            "media_upload": 1,
+                            "media_upload": 0,
                             "delay": 0
                         }
                     ],
@@ -187,6 +260,101 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_66e83cadf2b32": {
+                    "key": "layout_66e83cadf2b32",
+                    "name": "acf_element_accordion",
+                    "label": "Accordion",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_66e83cadf2b33",
+                            "label": "Title",
+                            "name": "title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "80",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_66e83cadf2b34",
+                            "label": "Q&A",
+                            "name": "questions",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "row",
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": "",
+                            "button_label": "Add Row",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_66e83cf4f2b35",
+                                    "label": "Question",
+                                    "name": "question",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_66e83cadf2b34"
+                                },
+                                {
+                                    "key": "field_66e83d06f2b36",
+                                    "label": "Answer",
+                                    "name": "answer",
+                                    "aria-label": "",
+                                    "type": "wysiwyg",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "tabs": "all",
+                                    "toolbar": "neofluxe_default",
+                                    "media_upload": 0,
+                                    "delay": 0,
+                                    "parent_repeater": "field_66e83cadf2b34"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_63a319a880d6e": {
                     "key": "layout_63a319a880d6e",
                     "name": "acf_element_contact",
@@ -222,54 +390,24 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_65a79e06baf18",
-                            "label": "ManualSelection",
-                            "name": "manualselection",
+                            "key": "field_66e7f9cee364b",
+                            "label": "Teaser",
+                            "name": "teaser",
                             "aria-label": "",
                             "type": "true_false",
-                            "instructions": "If selected, the post's can be defined manually",
+                            "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "",
                                 "class": "",
                                 "id": ""
                             },
-                            "message": "",
+                            "message": "Only show overview info",
                             "default_value": 0,
                             "ui_on_text": "",
                             "ui_off_text": "",
                             "ui": 1
-                        },
-                        {
-                            "key": "field_666c49c8739e5",
-                            "label": "Number of posts",
-                            "name": "number_of_posts",
-                            "aria-label": "",
-                            "type": "number",
-                            "instructions": "Leave empty or -1 for all Posts",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_65a79e06baf18",
-                                        "operator": "!=",
-                                        "value": "1"
-                                    }
-                                ]
-                            ],
-                            "wrapper": {
-                                "width": "50",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "min": "",
-                            "max": "",
-                            "placeholder": "",
-                            "step": "",
-                            "prepend": "",
-                            "append": ""
                         },
                         {
                             "key": "field_63bc350d80b04",
@@ -279,22 +417,16 @@
                             "type": "relationship",
                             "instructions": "",
                             "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_65a79e06baf18",
-                                        "operator": "==",
-                                        "value": "1"
-                                    }
-                                ]
-                            ],
+                            "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
                                 "class": "",
                                 "id": ""
                             },
                             "post_type": [
-                                "post"
+                                "offer",
+                                "page",
+                                "team"
                             ],
                             "post_status": "",
                             "taxonomy": "",
@@ -307,72 +439,84 @@
                             "elements": "",
                             "bidirectional": 0,
                             "bidirectional_target": []
-                        },
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_66e82d8f035c9": {
+                    "key": "layout_66e82d8f035c9",
+                    "name": "acf_element_team",
+                    "label": "Team",
+                    "display": "block",
+                    "sub_fields": [
                         {
-                            "key": "field_65a79c79baf17",
-                            "label": "PostType",
-                            "name": "posttype",
+                            "key": "field_66e82da3035d0",
+                            "label": "Title",
+                            "name": "title",
                             "aria-label": "",
-                            "type": "select",
+                            "type": "text",
                             "instructions": "",
                             "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_65a79e06baf18",
-                                        "operator": "!=",
-                                        "value": "1"
-                                    }
-                                ]
-                            ],
+                            "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "",
                                 "class": "",
                                 "id": ""
                             },
-                            "choices": {
-                                "post": "Post",
-                                "page": "Page"
-                            },
-                            "default_value": false,
-                            "return_format": "value",
-                            "multiple": 0,
-                            "allow_null": 0,
-                            "ui": 0,
-                            "ajax": 0,
-                            "placeholder": ""
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
                         },
                         {
-                            "key": "field_65a7a921fad87",
-                            "label": "Category",
-                            "name": "category",
+                            "key": "field_66e82db5035d1",
+                            "label": "Lead",
+                            "name": "lead",
                             "aria-label": "",
-                            "type": "taxonomy",
+                            "type": "textarea",
                             "instructions": "",
                             "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_65a79e06baf18",
-                                        "operator": "!=",
-                                        "value": "1"
-                                    }
-                                ]
-                            ],
+                            "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "",
                                 "class": "",
                                 "id": ""
                             },
-                            "taxonomy": "category",
-                            "add_term": 0,
-                            "save_terms": 0,
-                            "load_terms": 0,
-                            "return_format": "object",
-                            "field_type": "select",
-                            "allow_null": 0,
+                            "default_value": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "placeholder": "",
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_66e82d8f035cf",
+                            "label": "Select",
+                            "name": "select",
+                            "aria-label": "",
+                            "type": "relationship",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "team"
+                            ],
+                            "post_status": "",
+                            "taxonomy": "",
+                            "filters": [
+                                "search"
+                            ],
+                            "return_format": "id",
+                            "min": "",
+                            "max": "",
+                            "elements": "",
                             "bidirectional": 0,
-                            "multiple": 0,
                             "bidirectional_target": []
                         }
                     ],
@@ -410,5 +554,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1718372936
+    "modified": 1726496058
 }

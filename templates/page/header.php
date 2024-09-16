@@ -77,15 +77,19 @@
         </div>
     </div>
 
+</header>
+
+
     <!-- offcanvas nav-->
     <nav class="c-offcanvas-nav">
+        <a href="#" class="c-offcanvas-trigger c-offcanvas-trigger-close">
+            <img src="http://localhost/content/themes/malhaus/images/menu_close.jpg">
+        </a>
         <div class="c-offcanvas-inner">
             <div class="c-container-wide c-offcanvas-header c-line-top c-line-bottom">
                 <div class="c-container c-container-no-padding c-header-inner">
                     <!-- offcanvas trigger-->
-                    <a href="#" class="c-offcanvas-trigger c-offcanvas-trigger-close">
-                        <span class="c-hide-visually"><?= __( 'Menu schliessen', 'neofluxe' ); ?></span>
-                    </a>
+
                 </div>
             </div>
 
@@ -104,7 +108,6 @@
             </div>
         </div>
     </nav>
-</header>
 
 <!-- content-->
 <main class="c-content" role="main">

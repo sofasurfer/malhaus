@@ -6,8 +6,9 @@
 	position: relative;
 	display: block;
 	top: 0;
-	right: $grid-container;
-    right: var(--grid-container);
+	right: 0;
+	// right: $grid-container;
+    // right: var(--grid-container);
 	width: 132;
 	height: 110px;
 	margin: 0;
@@ -30,8 +31,8 @@
 	content:'';
 	display: block;
 	position: absolute;
-	right: 0;
-	top: 50%;
+	right: 52px;
+	top: 67px;
 }
 
 .c-offcanvas-trigger-open::before,
@@ -60,13 +61,20 @@
 	width: 15px;
 }
 
+.c-offcanvas-trigger-close{
+	position: absolute;
+	z-index: 999999;
+	top:1.5rem;
+	right:2rem;
+}
+
 .c-offcanvas-trigger-close::before,
 .c-offcanvas-trigger-close::after {
 	background-color: $color-highlight;
     background-color: var(--color-highlight);
     margin-top: -2px;
-    height: 2px;
-    width: 20px;
+    height: 4px;
+    width: 40px;
     transition: all .5s;
 }
 
@@ -133,28 +141,24 @@
 	padding-top: 0.75em;
 }
 
-.c-offcanvas-nav-list a {
-	display: inline-block;
-	position: relative;
-	padding-bottom: 0.25em;
-}
 
-.c-offcanvas-nav-list a::before {
-	content:'';
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	height: 0;
-	background-color: $border-basic;
-    background-color: var(--border-basic);
-	transition: all 0.2s linear;
-}
+.c-offcanvas-nav-list{
+	a{
+		display: inline-block;
+		position: relative;
+		padding-bottom: 0.25em;
+		font-size: 1.33rem;
+		font-weight: 400;
+		color: $color-highlight;
+	
+		&:hover{
+			text-decoration: underline;
+		}
+	}
 
-.c-offcanvas-nav-list a:focus::before,
-.c-offcanvas-nav-list a:hover::before,
-.c-offcanvas-nav-list .current-menu-item a::before{
-	height: 8px;
+	.c-active a{
+		text-decoration: underline;
+	}
 }
 
 /* ==========================================================================

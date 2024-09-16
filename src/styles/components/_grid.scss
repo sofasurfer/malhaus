@@ -13,7 +13,11 @@
 }
 
 .c-container-wide{
-    
+    padding: 0 2rem;
+}
+
+.c-margin-bottom{
+    margin-bottom: 4rem;
 }
 
 /* ==========================================================================
@@ -32,11 +36,17 @@
 
 .c-container-no-padding {
 	padding-bottom: 0;
+    padding-left:0;
+    padding-right:0;
 }
 
 .c-section-title {
 	padding-bottom: $spacing-m;
     padding-bottom: var(--spacing-m);
+}
+
+.c-container-postlisting{
+    padding: 0 2rem;
 }
 
 /* ==========================================================================
