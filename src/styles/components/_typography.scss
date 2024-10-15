@@ -2,7 +2,7 @@
    Base
    ========================================================================== */
 html {
-	font-size: 30px;
+	font-size: 26px;
 }
 
 /* ==========================================================================
@@ -132,27 +132,27 @@ h3,
 		margin-bottom: 1rem;
 	}
 
-	&.left{
-		margin-right: 4rem;
-		margin-left: 0rem;
-		transition: margin 0.5s ease;
+	// &.left{
+	// 	margin-right: 4rem;
+	// 	margin-left: 0rem;
+	// 	transition: margin 0.5s ease;
 
-		&:hover{
-			margin-right: 0rem;
-			margin-left: 4rem;
-		}
-	}
+	// 	&:hover{
+	// 		margin-right: 0rem;
+	// 		margin-left: 4rem;
+	// 	}
+	// }
 
-	&.right{
-		margin-right: 0rem;
-		margin-left: 4rem;
-		transition: margin 0.5s ease;
+	// &.right{
+	// 	margin-right: 0rem;
+	// 	margin-left: 4rem;
+	// 	transition: margin 0.5s ease;
 
-		&:hover{
-			margin-right: 4rem;
-			margin-left: 0rem;
-		}
-	}
+	// 	&:hover{
+	// 		margin-right: 4rem;
+	// 		margin-left: 0rem;
+	// 	}
+	// }
 
 	&.large{
 		h4{

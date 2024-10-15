@@ -1,5 +1,5 @@
 
-<div class="c-container-wide c-main-title">
+<div class="c-container c-main-title">
 	<div class="c-row">
 		<div class="c-col-12">
 			<div class="c-box">

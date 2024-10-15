@@ -19,6 +19,9 @@
 		?>
 		<?=  apply_filters('c_render_picturetag', $args); ?>		
 	</figure>
+</div>
+<div class="c-container c-main-title-img">
+
         <div class="c-row">
             <div class="c-col-12">
                 <div class="c-box">

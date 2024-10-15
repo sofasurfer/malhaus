@@ -17,24 +17,30 @@ $posts = apply_filters( 'get_post_listings', $site_element);
 
 		if( !empty($site_element['teaser'])  ):
 		?>
-			<div class="c-row c-teaser-posts <?= ($counter % 2 == 0)?'left':'right';?>" style="background-color:<?= $color;?>;">
-				<div class="c-col-4">
-					<?php if (!empty($image) ): ?>
-						<a href="<?= $link ?>"><figure> <img src="<?= $image; ?>" /> </figure></a>
-					<?php endif; ?>
-				</div>
-				<div class="c-col-8">
-					<a href="<?= $link ?>">
-						<article class="c-news-item c-box-small  c-text-block">
-							<h3><?= $title ?></h3>
-							<span class="c-lead"><?= $lead ?></span>
-							<p><?= $excerpt ?></p>
-						</article>
-					</a>
+		<div class="c-teaser-posts <?= ($counter % 2 == 0)?'left':'right';?>" style="background-color:<?= $color;?>;">
+			<div class="c-container">
+				<div class="c-row">
+					<div class="c-col-4">
+						<?php if (!empty($image) ): ?>
+							<a href="<?= $link ?>"><figure> <img src="<?= $image; ?>" /> </figure></a>
+						<?php endif; ?>
+					</div>
+					<div class="c-col-8">
+						<a href="<?= $link ?>">
+							<article class="c-news-item c-box-small  c-text-block">
+								<h3><?= $title ?></h3>
+								<span class="c-lead"><?= $lead ?></span>
+								<p><?= $excerpt ?></p>
+							</article>
+						</a>
+					</div>
 				</div>
 			</div>
+		</div>
 		<?php else: ?>
-			<div id="<?= sanitize_title($title);?>" class="c-row c-teaser-posts large" style="background-color:<?= $color;?>;">
+			<div id="<?= sanitize_title($title);?>" class="c-teaser-posts large" style="background-color:<?= $color;?>;">
+			<div class="c-container">
+			<div class="c-row">
 				<div class="c-col-4">
 					<?php if (!empty($image) ): ?>
 						<figure> <img src="<?= $image; ?>" /> </figure>
@@ -65,6 +71,8 @@ $posts = apply_filters( 'get_post_listings', $site_element);
 						</div>
 					</article>
 				</div>
+			</div>
+			</div>
 			</div>
 		<?php endif; ?>
 		

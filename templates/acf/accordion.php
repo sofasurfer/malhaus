@@ -1,4 +1,4 @@
-<div class="c-container-wide c-accordion">
+<div class="c-container c-accordion">
     <h2><?= $site_element['title'] ?></h2>
     <?php 
     $counter = 0;

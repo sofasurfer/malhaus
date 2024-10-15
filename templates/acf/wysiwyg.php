@@ -6,17 +6,20 @@ $content = $fields['wysiwyg'];
 
 <div class="c-container-wide c-text-only">
     <div class="c-text-block bubble <?= $site_element['bgcolor'] ? 'color':'';?>" style="background-color:<?= $site_element['bgcolor'];?>;">
-    <?php if( $site_element['image'] ):?>
-			<div class="c-row">
-				<div class="c-col-4">
-						<figure><?= wp_get_attachment_image($site_element['image_id']); ?></figure>
+		<div class="c-container">
+
+		<?php if( $site_element['image'] ):?>
+				<div class="c-row">
+					<div class="c-col-4">
+							<figure><?= wp_get_attachment_image($site_element['image_id']); ?></figure>
+					</div>
+					<div class="c-col-8">
+			<?= $content ?>
+					</div>
 				</div>
-				<div class="c-col-8">
-          <?= $content ?>
-				</div>
-			</div>
-    <?php else: ?>
-		  <?= $content ?>
-    <?php endif; ?>
-    </div>
+		<?php else: ?>
+			<?= $content ?>
+		<?php endif; ?>
+		</div>
+	</div>
 </div>
