@@ -29,7 +29,7 @@ $posts = apply_filters( 'get_post_listings', $site_element);
 						<a href="<?= $link ?>">
 							<article class="c-news-item c-box-small  c-text-block">
 								<h3><?= $title ?></h3>
-								<span class="c-lead"><?= $lead ?></span>
+								<p class="c-lead2"><?= $lead ?></p>
 								<p><?= $excerpt ?></p>
 							</article>
 						</a>
@@ -52,22 +52,12 @@ $posts = apply_filters( 'get_post_listings', $site_element);
 						<span class="c-lead"><?= $lead ?></span>
 						<p><?= $excerpt ?></p>
 						<div class="c-row infos">
-							<div class="c-col-6">
 							<?php foreach( get_field('infos',$post) as $info ): ?>
+							<div class="c-col-6">
 								<h4><?= $info['title'];?></h4>
 								<?= $info['text'];?>
+							</div>
 							<?php endforeach; ?>
-
-							</div>
-							<div class="c-col-6">
-								<h4>WEITERE INFOS</h4>
-								<p>
-								<a href="/das-malhaus/" class="c-icon c-link-icon c-link-arrow">Philosophie des Malhauses </a><br/>
-								<a href="/das-malhaus-unterstutzen/" class="c-icon c-link-icon c-link-arrow">Malhaus verschenken </a>
-								</p>
-								
-								<p>Haben Sie Fragen zu den Ateliers? Besuchen Sie unseren FAQ Bereich oder schreiben Sie ein Mail auf <a href="mailto:mail@malhaus.ch">mail@malhaus.ch</a></p>
-							</div>
 						</div>
 					</article>
 				</div>

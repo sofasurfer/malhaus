@@ -22,18 +22,18 @@ class Offer {
 
     public function register() {
         PostTypes::instance()->register_post_type('offer', 'dashicons-store', [
-            'name' => __('Offer', 'neofluxe'),
-            'singular_name' => __('Offer', 'neofluxe'),
-            'menu_name' => __('Offers', 'neofluxe'),
-            'all_items' => __('All Offers', 'neofluxe'),
-            'add_new' => __('Add Offer', 'neofluxe'),
-            'add_new_item' => __('New Offer', 'neofluxe'),
-            'edit_item' => __('Edit Offer', 'neofluxe'),
-            'new_item' => __('New Offer', 'neofluxe'),
-            'view_item' => __('Show Offer', 'neofluxe'),
-            'search_items' => __('Search Offers', 'neofluxe'),
-            'not_found' => __('Offer has not been found.', 'neofluxe'),
-            'not_found_in_trash' => __('Offer not found in the trash', 'neofluxe'),
+            'name' => __('Angebot', 'neofluxe'),
+            'singular_name' => __('Angebot', 'neofluxe'),
+            'menu_name' => __('Angebote', 'neofluxe'),
+            'all_items' => __('Alle Angebote', 'neofluxe'),
+            'add_new' => __('Neues Angebot', 'neofluxe'),
+            'add_new_item' => __('New Angebot', 'neofluxe'),
+            'edit_item' => __('Edit Angebot', 'neofluxe'),
+            'new_item' => __('New Angebot', 'neofluxe'),
+            'view_item' => __('Show Angebot', 'neofluxe'),
+            'search_items' => __('Search Angebote', 'neofluxe'),
+            'not_found' => __('Angebot has not been found.', 'neofluxe'),
+            'not_found_in_trash' => __('Angebot not found in the trash', 'neofluxe'),
             'publicly_queryable'  => false,
         ], [
             'en' => 'offer'
