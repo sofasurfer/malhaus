@@ -21,8 +21,7 @@ $socialmedia_accounts   = apply_filters( 'c_get_option', 'socialmedia_accounts' 
             </div>
 
             <div class="c-col-4 c-text-padding-var c-form-item">
-                <?= __("Newsletter abonieren","neofluxe");?>
-                <input class="c-newsletter" type="email" placeholder="<?= __("Email Adresse","neofluxe");?>" >
+                <input class="c-newsletter" type="email" placeholder="<?= __("Newsletter abonieren","neofluxe");?>" >
                 <p><a href=""><?= __("senden","neofluxe");?></a></p>
             </div>
 
