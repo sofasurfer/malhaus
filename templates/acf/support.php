@@ -40,6 +40,15 @@ $content = $fields['wysiwyg'];
                 </div>
                 -->
                 <div class="c-col-12">
+
+                    <!--
+                    <div class="rnw-widget-container"></div>
+                    <script src="https://tamaro.raisenow.com/XXX/latest/widget.js"></script> 
+                    <script>
+                    window.rnw.tamaro.runWidget('.rnw-widget-container', {language: 'de'})
+                    </script>       
+                    -->
+                    
                     <div id="rnw-paylink-button-drydk"></div>
 
                     <script type="module">
@@ -57,6 +66,7 @@ $content = $fields['wysiwyg'];
                     })
 
                     </script>
+                    
                 </div>  
             </div>
 		</div>
