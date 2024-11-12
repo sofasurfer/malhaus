@@ -17,16 +17,7 @@
 	}
 
 	.c-container {
-        max-width: 1620px;
-        margin-left: auto;
-		margin-right: auto;
-    }
-}
-
-@media only screen and (max-width:1800px) {
-	/* container max width */
-	.c-container {
-        max-width: 1320px;
+        max-width: 1420px;
         margin-left: auto;
 		margin-right: auto;
     }
@@ -36,17 +27,17 @@
 	}
 }
 
-@media only screen and (max-width:1490px) {  
+@media only screen and (max-width:1800px) {  
 
 
 	.c-container {
-        max-width: 1020px;
+        max-width: 1220px;
         margin-left: auto;
 		margin-right: auto;
     }
 
 	.c-teaser-posts{
-		max-width: 1220px;
+		max-width: 1420px;
 	}
 }
 
