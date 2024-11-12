@@ -23,7 +23,7 @@ cp -v ./style.css ./_release/
 find ./_release/ -name '.DS*' -delete
 
 # Copy files to LIVE server
-rsync -rva ./_release/ vemamuwo@sl1702.web.hostpoint.ch:/home/vemamuwo/www/malhaus.ch/content/themes/malhaus/
+#rsync -rva ./_release/ vemamuwo@sl1702.web.hostpoint.ch:/home/vemamuwo/www/malhaus.ch/content/themes/malhaus/
 
 rm -rf "$DIR"
 
