@@ -3,12 +3,12 @@
 $counter    = 0;
 $teams = apply_filters( 'get_post_listings', $site_element);
 ?>
-<div class="c-container-wide">
-    <div class="c-team">
+<div class="c-container-wide c-container-postlisting">
+    <div class="c-teaser-posts c-text-block" style="background-color:#F2F2F2;">
         <div class="c-container">
 
             <h2><?= $site_element['title'];?></h2>
-            <p class="c-lead"><?= $site_element['lead'];?></p>
+            <p><?= $site_element['lead'];?></p>
             <div class="c-row c-team-list">
             <?php foreach ( $teams as $team ): ?>
                 <div class="c-col-3">

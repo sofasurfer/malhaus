@@ -50,11 +50,11 @@ h3,
 
 .c-content,
 .c-footer {
-	line-height: 1.5;
+	line-height: 1.3;
 }
 
 .c-text-block p {
-	padding-bottom: 1.5em;
+	padding-bottom: 1.3em;
 }
 
 .c-text-block p + h2,
@@ -105,7 +105,14 @@ h3,
 
 .c-teaser-posts,
 .c-teaser-home{
-	h3{
+
+	.c-lead{
+		line-height: 1;
+		margin-top:-0.5em;
+		padding-bottom: 0.2rem;
+	}
+
+	h3.c-title-small{
 		line-height: 1;
 		margin-top:-0.3rem;
 		padding-bottom: 0.2rem;
@@ -124,12 +131,22 @@ h3,
 	border-radius: 150px;
 	padding: 2rem;
 
+    max-width: 1820px;
+    margin-left: auto;
+    margin-right: auto;
+
+	transition: max-width 0.5s ease;
+
 	h3,.c-lead{
 		color: $text-color;
 	}
 	.c-lead{
 		display: block;
 		margin-bottom: 1rem;
+	}
+
+	&:hover{
+		max-width: 1720px;
 	}
 
 	// &.left{
@@ -170,6 +187,18 @@ h3,
 .c-teaser-text{
 	font-size: 1rem;
 	color: $color-highlight;
+}
+
+.c-team-item{
+	font-size: 0.7rem;
+	h3{
+		font-size: 1.1rem;
+		padding-bottom: 0;
+	}
+	.c-lead{
+		font-size: 0.9rem;
+		margin-bottom: 0.5rem;
+	}
 }
 
 .c-text-small,
@@ -375,6 +404,11 @@ h3,
 		-moz-hyphens: auto;
 		-webkit-hyphens: auto;
 		hyphens: auto;
+	}
+}
+@media only screen and (max-width:1800px) {
+	html {
+		font-size: 20px;
 	}
 }
 

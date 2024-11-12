@@ -10,17 +10,48 @@
    Mediaqueries
    ========================================================================== */
 
-@media only screen and (min-width:1330px) {
+
+@media only screen and (min-width:1800px) {
+   	.c-container-postlisting{
+    	padding: 0 2rem;
+	}
+
+	.c-container {
+        max-width: 1620px;
+        margin-left: auto;
+		margin-right: auto;
+    }
+}
+
+@media only screen and (max-width:1800px) {
 	/* container max width */
 	.c-container {
         max-width: 1320px;
         margin-left: auto;
 		margin-right: auto;
     }
+
+	.c-teaser-posts{
+		max-width: 1520px;
+	}
+}
+
+@media only screen and (max-width:1490px) {  
+
+
+	.c-container {
+        max-width: 1020px;
+        margin-left: auto;
+		margin-right: auto;
+    }
+
+	.c-teaser-posts{
+		max-width: 1220px;
+	}
 }
 
 /* header show offcanvas */
-@media only screen and (max-width:900px) {  
+@media only screen and (max-width:1000px) {  
 	.c-offcanvas-trigger-open {
 		display: block;
 	}
@@ -29,9 +60,27 @@
     .c-header-lang {
 		display: none;
 	}
-}
 
+	.c-teaser-posts{
+		margin-left:-2rem;
+		margin-right:-2rem;
+		padding: 1rem 0;
+		border-radius: 0;
+	}
+
+	.c-col-2,.c-col-4,.c-col-6,.c-col-8,.c-col-12{
+		-webkit-box-flex: 0;
+		-webkit-flex: 0 0 100%;
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		max-width: 100%;  
+	}
+}
 @media only screen and (max-width:767px) {  
+	.c-text-only .c-col-4,
+	.c-main-title .c-col-4,
+	.c-section-title .c-col-4,
+	.c-quote .c-col-4,
 	.c-text-only .c-col-8,
 	.c-main-title .c-col-8,
 	.c-section-title .c-col-8,

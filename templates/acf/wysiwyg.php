@@ -4,8 +4,8 @@ $fields  = $site_element;
 $content = $fields['wysiwyg'];
 ?>
 
-<div class="c-container-wide c-text-only">
-    <div class="c-text-block bubble <?= $site_element['bgcolor'] ? 'color':'';?>" style="background-color:<?= $site_element['bgcolor'];?>;">
+<div class="c-container-wide c-container-postlisting">
+    <div class="c-teaser-posts <?= $site_element['bgcolor'] ? 'color':'';?>" style="background-color:<?= $site_element['bgcolor'];?>;">
 		<div class="c-container">
 
 		<?php if( $site_element['image'] ):?>
