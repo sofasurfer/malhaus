@@ -56,7 +56,7 @@
     <div class="c-container-wide c-line-top c-line-bottom">
         <div class="c-container-wide c-container-no-padding c-header-inner">
 
-            <div class="c-header-social">
+            <div class="c-header-social c-hide-mobile">
                 <?php
                 $socialmedia_accounts   = apply_filters( 'c_get_option', 'socialmedia_accounts' );
                 ?>
