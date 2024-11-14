@@ -31,7 +31,7 @@ $posts = apply_filters( 'get_post_listings', $site_element);
 		<div class="c-teaser-posts <?= ($counter % 2 == 0)?'left':'right';?>" style="background-color:<?= $color;?>;">
 			<div class="c-container">
 				<div class="c-row <?= ($counter % 2 == 0)?'c-row-reverse':'';?>" >
-					<div class="c-col-4">
+					<div class="c-col-4 c-hide-mobile">
 						<?php if (!empty($image) ): ?>
 							<a href="<?= $link ?>"><figure> <img src="<?= $image; ?>" /> </figure></a>
 						<?php endif; ?>
@@ -41,7 +41,7 @@ $posts = apply_filters( 'get_post_listings', $site_element);
 							<article class="c-news-item c-box-small  c-text-block">
 								<h3 class="c-title-small"><?= $title ?></h3>
 								<p class="c-lead2"><?= $lead ?></p>
-								<p><?= $excerpt ?></p>
+								<p class="c-hide-mobile"><?= $excerpt ?></p>
 							</article>
 						</a>
 					</div>
@@ -52,7 +52,7 @@ $posts = apply_filters( 'get_post_listings', $site_element);
 			<div id="<?= sanitize_title($title);?>" class="c-teaser-posts large" style="background-color:<?= $color;?>;">
 			<div class="c-container c-text-block">
 			<div class="c-row">
-				<div class="c-col-4">
+				<div class="c-col-4 c-hide-mobile">
 					<?php if (!empty($image) ): ?>
 						<figure> <img src="<?= $image; ?>" /> </figure>
 					<?php endif; ?>
