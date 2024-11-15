@@ -70,15 +70,15 @@
                 </a>
             </div>
 
-            <!-- offcanvas trigger-->
-            <a href="#open-navigation" class="c-offcanvas-trigger">
-            <img src="<?= get_stylesheet_directory_uri(); ?>/images/menu.jpg" />
-            </a>
+            <div class="empty"></div>
         </div>
     </div>
-
 </header>
 
+    <!-- offcanvas trigger-->
+    <a href="#open-navigation" class="c-offcanvas-trigger c-offcanvas-trigger-open">
+        <img src="<?= get_stylesheet_directory_uri(); ?>/images/menu.jpg" />
+    </a>
 
     <!-- offcanvas nav-->
     <nav id="c-offcanvas-nav" class="c-offcanvas-nav">

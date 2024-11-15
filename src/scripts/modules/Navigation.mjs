@@ -7,11 +7,12 @@ class Navigation {
 
     constructor(navigation = '.c-offcanvas-nav-list') {
         this.navigations = document.querySelectorAll(navigation) || [];
-
+        this.scrollPos = 0;
         this.init()
     }
 
     init() {
+
         // Add active state to anchor links
         const targetFragment = window.location.hash;
         console.log('TARGET: ' + targetFragment);
@@ -40,14 +41,34 @@ class Navigation {
                 activeElements.forEach(element => {
                     element.classList.remove('c-active');
                 });
-
                 link.parentElement.classList.add('c-active');
 
+                var offcanvas = document.getElementById('open-navigation');
+                offcanvas.classList.remove('open');
+                
                 window.location.href = link.href;
 
             });
         });
 
+        var offcanvasElements = document.querySelectorAll('.c-offcanvas-trigger');
+        if(offcanvasElements){
+            offcanvasElements.forEach(offcanvas => {
+                offcanvas.addEventListener('click', (event) => this.handleOffcanvas(event));
+            });            
+        }
+
+    }    
+    
+    handleOffcanvas(event){
+        event.preventDefault(); 
+        var offcanvas = document.getElementById('open-navigation');
+        if( offcanvas.classList.contains('open') ){
+            offcanvas.classList.remove('open');
+        }else{
+            this.scrollPos = window.scrollY;
+            offcanvas.classList.add('open');
+        }
     }
 
 }
