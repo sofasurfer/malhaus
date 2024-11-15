@@ -83,7 +83,7 @@
     <!-- offcanvas nav-->
     <nav id="c-offcanvas-nav" class="c-offcanvas-nav">
         <a href="#" class="c-offcanvas-trigger c-offcanvas-trigger-close">
-            <img src="http://localhost/content/themes/malhaus/images/menu_close.jpg">
+            <img src="<?= get_stylesheet_directory_uri(); ?>/images/menu_close.jpg" />
         </a>
         <div class="c-offcanvas-inner">
             <div class="c-container-wide c-offcanvas-header c-line-top c-line-bottom">
