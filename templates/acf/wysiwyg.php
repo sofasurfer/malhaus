@@ -6,7 +6,7 @@ $content = $fields['wysiwyg'];
 ?>
 
 <div  id="<?= sanitize_title($title);?>" class="c-container-wide c-container-postlisting">
-    <div class="c-teaser-posts large <?= $site_element['bgcolor'] ? 'color':'';?>" style="background-color:<?= $site_element['bgcolor'];?>;">
+    <div class="c-teaser-posts large c-text-block <?= $site_element['bgcolor'] ? 'color':'';?>" style="background-color:<?= $site_element['bgcolor'];?>;">
 		<div class="c-container">
 
 		<?php if( $site_element['image'] ):?>

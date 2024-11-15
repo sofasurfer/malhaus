@@ -53,8 +53,14 @@ h3,
 	line-height: 1.3;
 }
 
-.c-text-block p {
-	padding-bottom: 1.3em;
+.c-text-block {
+	h3 {
+		padding-top: 0;
+		// padding-bottom: 1.3em;
+	}
+	p {
+		padding-bottom: 0.5em;
+	}
 }
 
 .c-text-block p + h2,
@@ -69,7 +75,7 @@ h3,
 .c-text-block ol + h2,
 .c-text-block ol + h3,
 .c-text-block ol + h4 {
-	padding-top: 1.5em;
+	padding-top: 1em;
 }
 
 .c-lead {
