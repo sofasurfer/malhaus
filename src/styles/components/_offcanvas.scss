@@ -3,10 +3,10 @@
    ========================================================================== */
 
 .c-offcanvas-trigger {
-	position: relative;
+	position: fixed;
 	display: block;
-	top: 12px;
-	right: 0;
+	top: 2rem;
+	right: 2rem;
 	// right: $grid-container;
     // right: var(--grid-container);
 	width: 132;
@@ -16,6 +16,7 @@
 	transform: perspective(1px) translateZ(0);
 	transition: all 0.2s ease-in-out;
 	overflow: hidden;
+	z-index: 99;
 
 	img{
 		height: 110px;
@@ -23,9 +24,10 @@
 }
 
 .c-offcanvas-trigger-open {
-	display: none;
+	display: block;
 }
 
+/*
 .c-offcanvas-trigger::before,
 .c-offcanvas-trigger::after {
 	content:'';
@@ -61,10 +63,11 @@
 	width: 15px;
 }
 
+
 .c-offcanvas-trigger-close{
 	position: absolute;
 	z-index: 999999;
-	top:1.5rem;
+	top:2rem;
 	right:2rem;
 }
 
@@ -85,6 +88,7 @@
 .c-offcanvas-trigger-close::after {
 	transform: rotate(45deg);
 }
+*/
 
 /* ==========================================================================
    Offcanvas nav main container
@@ -104,17 +108,18 @@
 	overflow-y: auto;
 	transition: height .2s ease-out 0s;
 	background: #EFEFEF 0% 0% no-repeat padding-box;
-	// box-shadow: inset 0px 3px 6px #00000029, 0px 3px 6px #00000029;
+	box-shadow: inset 0px 3px 6px #00000029, 0px 3px 6px #00000029;
 }
 
+#open-navigation.navigation .c-offcanvas-nav,
 #open-navigation:not(:target) .c-offcanvas-nav {
     border: 0;
-    clip: rect(0 0 0 0);
+    // clip: rect(0 0 0 0);
     height: 1px;
     margin: -1px;
     overflow: hidden;
     padding: 0;
-    position: absolute;
+    position: fixed;
     width: 1px;
     white-space: nowrap;
 }
@@ -169,8 +174,8 @@
 		}
 
 		li{
-			display: inline-block;
 			width:45%;
+			float: left;
 		}
 	}
 }
@@ -179,12 +184,14 @@
    Offcanvas nav open
    ========================================================================== */
 
+#open-navigation.open,
 #open-navigation:target {
-	position: relative;
-	// top: auto;
-	// height: auto;
-	// overflow: hidden;
-	// width: 100%;
+
+    position: relative;
+    // top: auto;
+    // height: auto;
+    // overflow: hidden;
+    // width: 100%;
 	// height: 100%;
 
 	.c-offcanvas-nav {
@@ -197,4 +204,5 @@
 	.c-offcanvas-trigger-open {
 		display: none;
 	}
+
 }

@@ -4,7 +4,7 @@ $counter    = 0;
 $teams = apply_filters( 'get_post_listings', $site_element);
 ?>
 <div id="team" class="c-container-wide c-container-postlisting">
-    <div class="c-teaser-posts c-text-block" style="background-color:#F2F2F2;">
+    <div class="c-teaser-posts large color c-text-block" style="background-color:#F2F2F2;">
         <div class="c-container">
 
             <h2><?= $site_element['title'];?></h2>
