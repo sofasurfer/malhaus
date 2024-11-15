@@ -29,6 +29,7 @@
                 </div>
             </div>
         </div>
+        
         <?php if(!empty(get_field('alert_text'))): ?>
         <div class="c-row">
             <div class="c-col-12">

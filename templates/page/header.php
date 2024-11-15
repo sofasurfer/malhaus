@@ -81,7 +81,7 @@
 
 
     <!-- offcanvas nav-->
-    <nav class="c-offcanvas-nav">
+    <nav id="c-offcanvas-nav" class="c-offcanvas-nav">
         <a href="#" class="c-offcanvas-trigger c-offcanvas-trigger-close">
             <img src="http://localhost/content/themes/malhaus/images/menu_close.jpg">
         </a>
@@ -101,6 +101,17 @@
 								'theme_location' => 'header-menu',
 								'container'      => false,
 								'menu_class'     => 'c-offcanvas-nav-list',
+							)
+						); ?>
+                    </div>
+                </div>
+                <div class="c-row">
+                    <div class="c-col-12 c-text-padding">
+						<?php wp_nav_menu(
+							array(
+								'theme_location' => 'header-sub-menu',
+								'container'      => false,
+								'menu_class'     => 'c-offcanvas-nav-list submenu',
 							)
 						); ?>
                     </div>
