@@ -127,6 +127,26 @@
                             "append": ""
                         },
                         {
+                            "key": "field_6737491ea09c0",
+                            "label": "Title",
+                            "name": "title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
                             "key": "field_63a315cd41e79",
                             "label": "Editor",
                             "name": "wysiwyg",
@@ -657,5 +677,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1731412025
+    "modified": 1731676460
 }

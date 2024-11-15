@@ -12,80 +12,44 @@ class Navigation {
     }
 
     init() {
-        for (let navigation of this.navigations) {
-
-            const lists = navigation.querySelectorAll('.menu-item')
-
-            for (let list of lists) {
-                this.setupToggle(list);
-                this.copyMainAnchorToSubmenu(list);
-                this.openCurrentlyActiveLists(list);
-            }
-        }
-    }
-
-    /**
-     * @param list {HTMLElement}
-     * @returns {boolean} fail or success
-     */
-    setupToggle(list) {
-        const className = 'menu-item-has-children'
-        const anchor = list.querySelector('a')
-
-        if (!list.classList.contains(className)) {
-            return false
+        // Add active state to anchor links
+        const targetFragment = window.location.hash;
+        console.log('TARGET: ' + targetFragment);
+        if(targetFragment){
+            const links = document.querySelectorAll('a[href*="#"]');
+    
+            links.forEach(link => {
+                if (link.href.includes(targetFragment)) {
+                    link.parentElement.classList.add('c-active');
+                }
+            });
         }
 
-        list.addEventListener('click', (event) => {
-            if (event.target === anchor) {
-                event.preventDefault()
-            }
+        // Select all elements with the class 'menu-item-link'
+        const menuLinks = document.querySelectorAll('.menu-item-link');
 
-            list.classList.toggle('c-is-open')
-        })
+        // Add a click event listener to each link
+        menuLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                // console.log(`Clicked on: ${link.href}`);
 
-        return true
+                // Select the parent element with the id 'menu-main'
+                const menuMain = document.getElementById('c-offcanvas-nav');
+                const activeElements = menuMain.querySelectorAll('.c-active');
+                activeElements.forEach(element => {
+                    element.classList.remove('c-active');
+                });
+
+                link.parentElement.classList.add('c-active');
+
+                window.location.href = link.href;
+
+            });
+        });
+
     }
 
-    /**
-     * @param list {HTMLElement}
-     * @returns {boolean} fail or success
-     */
-    openCurrentlyActiveLists(list) {
-        const isCurrent = list.classList.contains('current-menu-item') || list.classList.contains('current_page_item')
-        const hasChildrenClass = list.classList.contains('menu-item-has-children')
-        const isParent = list.classList.contains('current-menu-parent') || list.classList.contains('current-menu-ancestor')
-
-        if (isParent) {
-            list.classList.add('c-is-open')
-            return true
-        } else if (hasChildrenClass && isCurrent) {
-            list.classList.add('c-is-open')
-            return true
-        }
-
-        return false
-    }
-
-    /**
-     * @param list {HTMLElement}
-     * @returns {boolean} fail or success
-     */
-    copyMainAnchorToSubmenu(list) {
-        const anchor = list.querySelector('a')
-        const submenuChild = list.querySelector('.sub-menu')
-
-        if (!submenuChild) {
-            return false
-        }
-
-        const clone = anchor.cloneNode(true)
-        const li = document.createElement('li')
-        li.appendChild(clone)
-        submenuChild.insertBefore(li, submenuChild.firstChild)
-
-        return true
-    }
 }
 
 export default Navigation;

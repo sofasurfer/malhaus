@@ -266,12 +266,18 @@ class general {
 
 	public function c_register_main_menu(): void {
 		register_nav_menu( 'header-menu', __( 'Header Menu' ) );
+		register_nav_menu( 'header-sub-menu', __( 'Header Sub Menu' ) );
 		register_nav_menu( 'footer-menu', __( 'Footer Menu' ) );
 
 	}
 
 	public function c_special_nav_class( $classes, $item ) {
-		if ( in_array( 'current-menu-item', $classes ) ) {
+
+		$url = $_SERVER['QUERY_STRING'];
+		
+		error_log('URL: ' . $url);
+
+		if ( in_array( 'current-menu-item', $classes ) && !in_array('menu-item-object-custom',$classes) ) {
 			$classes[] = 'c-active';
 		}
 		if ( $item->object_id == get_option( 'archive_blog' ) && get_post_type( get_queried_object_id() ) == 'post' ) {

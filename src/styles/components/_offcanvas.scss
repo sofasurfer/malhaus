@@ -5,7 +5,7 @@
 .c-offcanvas-trigger {
 	position: relative;
 	display: block;
-	top: 0;
+	top: 12px;
 	right: 0;
 	// right: $grid-container;
     // right: var(--grid-container);
@@ -94,7 +94,7 @@
 	/*display: none;*/
 	position: absolute;
 	top: 0;
-	left: 0;
+	right: 0;
 	background-color: $bg-light;
     background-color: var(--bg-light);
 	color: var(--text-color);
@@ -103,6 +103,8 @@
 	height: 0;
 	overflow-y: auto;
 	transition: height .2s ease-out 0s;
+	background: #EFEFEF 0% 0% no-repeat padding-box;
+	// box-shadow: inset 0px 3px 6px #00000029, 0px 3px 6px #00000029;
 }
 
 #open-navigation:not(:target) .c-offcanvas-nav {
@@ -120,7 +122,7 @@
 .c-offcanvas-inner {
 	position: relative;
 	width: 100%;
-	min-height: 100vh;
+	// min-height: 100vh;
 	overflow-y: auto;
 }
 
@@ -128,7 +130,7 @@
    Offcanvas Content
    ========================================================================== */
 .c-offcanvas-content {
-	padding-top: 1.5em;
+	padding-top: 6rem;
 }
 
 .c-offcanvas-nav-list {
@@ -137,9 +139,9 @@
 	list-style: none;
 }
 
-.c-offcanvas-nav-list li + li {
-	padding-top: 0.75em;
-}
+// .c-offcanvas-nav-list li + li {
+// 	padding-top: 0.75em;
+// }
 
 
 .c-offcanvas-nav-list{
@@ -148,7 +150,7 @@
 		position: relative;
 		padding-bottom: 0.25em;
 		font-size: 1.33rem;
-		font-weight: 400;
+		font-weight: 500;
 		color: $color-highlight;
 	
 		&:hover{
@@ -159,6 +161,18 @@
 	.c-active a{
 		text-decoration: underline;
 	}
+
+	&.submenu{
+		margin-top: 2rem;
+		a{
+			font-size: 1rem;
+		}
+
+		li{
+			display: inline-block;
+			width:45%;
+		}
+	}
 }
 
 /* ==========================================================================
@@ -166,19 +180,18 @@
    ========================================================================== */
 
 #open-navigation:target {
-    position: relative;
-    top: auto;
-    height: auto;
-    overflow: hidden;
-    width: 100%;
-	height: 100%;
-}
+	position: relative;
+	// top: auto;
+	// height: auto;
+	// overflow: hidden;
+	// width: 100%;
+	// height: 100%;
 
-#open-navigation:target {
 	.c-offcanvas-nav {
-		width: 100%;
-		height: 100vh;
+		width: 700px;
+		height: 900px;
 		overflow-y: auto;
+		scrollbar-width: none; 
 	}
 	
 	.c-offcanvas-trigger-open {
