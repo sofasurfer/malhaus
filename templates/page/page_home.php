@@ -65,7 +65,7 @@
 
             <div class="c-col-6 c-teaser-home">
                 <h3 class="c-title-small"><?= get_the_title( $news );?></h3>
-                <span class="c-lead-small"><?= get_field('lead',$news);?></span>
+                <p class="c-lead"><?= get_field('lead',$news);?></p>
                 <div class="c-teaser-text">
                     <?= get_field('text',$news); ?>
                 </div>

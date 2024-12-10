@@ -12,7 +12,7 @@ $content = $fields['wysiwyg'];
 		<?php if( $site_element['image'] ):?>
 				<div class="c-row">
 					<div class="c-col-4">
-							<figure><?= wp_get_attachment_image($site_element['image_id']); ?></figure>
+						<figure><?= wp_get_attachment_image($site_element['image_id']); ?></figure>
 					</div>
 					<d class="c-col-8">
 					<h2><?= $title ; ?></h2>
