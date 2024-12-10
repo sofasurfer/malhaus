@@ -79,7 +79,7 @@ h3,
 }
 
 .c-lead {
-	font-size: 1rem;
+	font-size: 1.4rem;
 	line-height: 1.33;
 	color: $color-highlight;
 	margin-bottom: 1.5em;
@@ -101,12 +101,17 @@ h3,
 }
 
 .c-alert{
+	font-size: 1.4rem;
 	padding: 1rem;
 	border-radius: 53px;
 	margin-bottom: 1.5em;
 	color: $color-highlight;
 	font-weight: $font-weight-big;
 	background-color: $color-alert;
+
+	a{
+		color:$color-highlight;
+	}
 }
 
 .c-teaser-posts,
@@ -114,7 +119,7 @@ h3,
 
 	.c-lead{
 		line-height: 1;
-		margin-top:-0.5em;
+		// margin-top:-0.5em;
 		padding-bottom: 0.2rem;
 	}
 
@@ -122,11 +127,18 @@ h3,
 		line-height: 1;
 		margin-top:-0.3rem;
 		padding-bottom: 0.2rem;
+		margin-bottom:0.5rem;
 	}
 
 	.c-lead-small{
 		display: inline-block;
 		margin-bottom: 1rem;
+	}
+}
+
+.c-teaser-home{
+	.c-lead{
+		margin-bottom: 0.5rem;
 	}
 }
 
@@ -198,8 +210,8 @@ h3,
 .c-team-item{
 	font-size: 0.7rem;
 	h3{
-		font-size: 1.1rem;
-		padding-bottom: 0;
+		font-size: 1.2rem;
+		// padding-bottom: 0;
 	}
 	.c-lead{
 		font-size: 0.9rem;

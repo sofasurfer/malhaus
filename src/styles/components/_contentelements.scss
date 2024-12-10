@@ -58,16 +58,20 @@
     
     .c-accordion-container{
 
-        border-top: 4px solid $color-highlight;
+        border-top: 3px solid $color-highlight;
         padding: 1rem 0;
 
         &:last-child{
-            border-bottom: 4px solid $color-highlight;
+            border-bottom: 3px solid $color-highlight;
         }
 
         label{
             color: $color-highlight;
             font-size: 1rem;
+
+            &:hover{
+                font-size: bold;
+            }
         }
         .c-accordion-check{
             display: none;
