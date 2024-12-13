@@ -76,11 +76,13 @@ $posts = apply_filters( 'get_post_listings', $site_element);
 						<p class="c-lead"><?= $lead ?></p>
 						<p><?= $text ?></p>
 						<div class="c-row infos">
-							<?php foreach( get_field('infos',$post) as $info ): ?>
-							<div class="c-col-6">
-								<h4><?= $info['title'] ? $info['title'] : '&nbsp;';?></h4>
-								<?= $info['text'];?>
-							</div>
+							<?php 
+							$infos = get_field('infos',$post);
+							foreach( $infos as $info ): ?>
+								<div class="c-col-6">
+									<h4><?= $info['title'] ? $info['title'] : '&nbsp;';?></h4>
+									<?= $info['text'];?>
+								</div>
 							<?php endforeach; ?>
 						</div>
 					</article>

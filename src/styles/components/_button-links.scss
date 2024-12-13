@@ -9,12 +9,12 @@ a[href^="tel:"] {
 }
 
 .c-text-block a {
-	background-image: linear-gradient(to bottom,$text-color-link 0%,$text-color-link 100%);
-    background-image: linear-gradient(to bottom,var(--text-color-link) 0%,var(--text-color-link) 100%);
-    background-position: 0 100%;
-    background-repeat: repeat-x;
-    background-size: 1px 1px;
-  	transition: background .1s;
+	// background-image: linear-gradient(to bottom,$text-color-link 0%,$text-color-link 100%);
+    // background-image: linear-gradient(to bottom,var(--text-color-link) 0%,var(--text-color-link) 100%);
+    // background-position: 0 100%;
+    // background-repeat: repeat-x;
+    // background-size: 1px 1px;
+  	// transition: background .1s;
 }
 
 .c-text-block a:focus,
