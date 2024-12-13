@@ -36,7 +36,7 @@ $posts = apply_filters( 'get_post_listings', $site_element);
 			$color	    = get_field('bgcolor',$post);
 			$clean_text = wp_strip_all_tags( $text );
 			$excerpt 	= mb_substr( $clean_text, 0, 250);
-			$image      = get_the_post_thumbnail_url($post->ID );
+			$image      = get_post_thumbnail_id($post->ID );
 			$link		= get_permalink($post);
 		}
 		if( !empty($site_element['teaser'])  ):
@@ -46,7 +46,7 @@ $posts = apply_filters( 'get_post_listings', $site_element);
 				<div class="c-row <?= ($counter % 2 == 0)?'c-row-reverse':'';?>" >
 					<div class="c-col-4 c-hide-mobile">
 						<?php if (!empty($image) ): ?>
-							<a href="<?= $link ?>"><figure><?= wp_get_attachment_image($image); ?></figure></a>
+							<a href="<?= $link ?>"><figure><?= wp_get_attachment_image($image, 'full'); ?></figure></a>
 						<?php endif; ?>
 					</div>
 					<div class="c-col-8">
@@ -67,7 +67,7 @@ $posts = apply_filters( 'get_post_listings', $site_element);
 			<div class="c-row">
 				<div class="c-col-4 c-hide-mobile">
 					<?php if (!empty($image) ): ?>
-						<figure> <?= wp_get_attachment_image($image); ?> </figure>
+						<figure> <?= wp_get_attachment_image($image, 'full'); ?> </figure>
 					<?php endif; ?>
 				</div>
 				<div class="c-col-8">

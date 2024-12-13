@@ -34,7 +34,7 @@
         <div class="c-row">
             <div class="c-col-12">
                 <div class="c-box">
-                    <p class="c-alert"><a class="c-icon c-link-icon c-link-arrow" href=""><?= get_field('alert_text');?></a></p>
+                    <p class="c-alert"><a class="" href=""><?= get_field('alert_text');?></a></p>
                 </div>
             </div>
         </div>
