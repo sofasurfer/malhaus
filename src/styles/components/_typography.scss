@@ -106,11 +106,12 @@ h3,
 	border-radius: 53px;
 	margin-bottom: 1.5em;
 	color: $color-highlight;
-	font-weight: $font-weight-big;
+	// font-weight: $font-weight-big;
 	background-color: $color-alert;
 
 	a{
 		color:$color-highlight;
+		font-weight: normal!important;
 	}
 }
 
