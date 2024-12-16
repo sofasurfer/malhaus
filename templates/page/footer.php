@@ -10,7 +10,7 @@ $socialmedia_accounts   = apply_filters( 'c_get_option', 'socialmedia_accounts' 
 
 </main>
 
-<footer class="c-footer" role="contentinfo">
+<footer id="footer" class="c-footer" role="contentinfo">
 
     <div class="c-container-wide c-container-no-padding c-footer-main">
         <div class="c-row">
@@ -21,7 +21,7 @@ $socialmedia_accounts   = apply_filters( 'c_get_option', 'socialmedia_accounts' 
             </div>
 
             <div class="c-col-4 c-text-padding-var c-form-item">
-                <input class="c-newsletter" type="email" placeholder="<?= __("Newsletter abonieren","neofluxe");?>" >
+                <input class="c-newsletter" type="email" placeholder="<?= __("Newsletter abonnieren","neofluxe");?>" >
                 <p><a href=""><?= __("senden","neofluxe");?></a></p>
             </div>
 

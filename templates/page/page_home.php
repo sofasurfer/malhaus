@@ -29,18 +29,31 @@
                 </div>
             </div>
         </div>
-        
-        <?php if(!empty(get_field('alert_text'))): ?>
-        <div class="c-row">
-            <div class="c-col-12">
-                <div class="c-box">
-                    <p class="c-alert"><a class="" href=""><?= get_field('alert_text');?></a></p>
+</div>
+
+
+<?php if(!empty(get_field('alert_text'))): ?>
+    <div class="c-container-wide c-container-postlisting padding-bottom">
+        <div class="c-teaser-posts" style="background-color:#FAF68A;padding-bottom:0px;">
+            <div class="c-container">
+                <div class="c-row">
+                    <div class="c-col-12">
+                        <div class="c-box">
+                            <?php if( !empty(get_field('alert_link')) ): 
+                                $link = get_field('alert_link')?>
+                                <p class="c-alert"><a class="" target="<?= $link['target'];?>" href="<?= $link['url'];?>"><?= get_field('alert_text');?></a></p>
+                            <?php else: ?>
+                                <p class="c-alert"><?= get_field('alert_text');?></p>
+                            <?php endif; ?>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <?php endif;?>
+    </div>
+<?php endif;?>
 
-
+<div class="c-container c-main-title-img">
         <?php
         // Get News
         $args = array(
@@ -59,9 +72,22 @@
                 <h2><?= __('News','neofluxe');?></h2>
             </div>
 
-            <div class="c-col-6">
-                <?= get_the_post_thumbnail( $news,'full' );?>
-            </div>
+            <?php if( !empty( get_field('video_url',$news) ) ):?>
+                <div class="c-col-6">
+                    <div class="c-ratiobox c-ratiobox-16by9">
+                        <iframe 
+                            src="<?= get_field('video_url',$news);?>" 
+                            frameborder="0" 
+                            allow="autoplay; fullscreen; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            <?php else: ?>
+                <div class="c-col-6">
+                    <?= get_the_post_thumbnail( $news,'full' );?>
+                </div>
+            <?php endif; ?>
 
             <div class="c-col-6 c-teaser-home">
                 <h3 class="c-title-small"><?= get_the_title( $news );?></h3>
