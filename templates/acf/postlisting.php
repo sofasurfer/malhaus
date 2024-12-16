@@ -78,12 +78,21 @@ $posts = apply_filters( 'get_post_listings', $site_element);
 						<div class="c-row infos">
 							<?php 
 							$infos = get_field('infos',$post);
-							foreach( $infos as $info ): ?>
-								<div class="c-col-6">
-									<h4><?= $info['title'] ? $info['title'] : '&nbsp;';?></h4>
-									<?= $info['text'];?>
-								</div>
+							$split = ceil(count($infos) / 2);
+							$leftColumn = array_slice($infos, 0, $split);
+							$rightColumn = array_slice($infos, $split);?>
+							<div class="c-col-6">
+							<?php foreach( $leftColumn as $info ): ?>
+								<h4><?= $info['title'] ? $info['title'] : '&nbsp;';?></h4>
+								<?= $info['text'];?>
 							<?php endforeach; ?>
+							</div>
+							<div class="c-col-6">
+							<?php foreach( $rightColumn as $info ): ?>
+								<h4><?= $info['title'] ? $info['title'] : '&nbsp;';?></h4>
+								<?= $info['text'];?>
+							<?php endforeach; ?>
+							</div>
 						</div>
 					</article>
 				</div>
