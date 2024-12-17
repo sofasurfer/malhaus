@@ -80,6 +80,12 @@ class WysiwygSettings {
 				'classes'  => 'c-text-small',
 				'wrapper'  => false,
 			),
+			array(
+				'title'    => 'Link',
+				'selector' => 'a',
+				'classes'  => 'c-icon c-link-arrow',
+				'wrapper'  => false,
+			),
 		);
 
 		$settings['style_formats'] = json_encode( $style_formats );
