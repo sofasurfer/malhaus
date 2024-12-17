@@ -135,12 +135,27 @@ h3,
 		display: inline-block;
 		margin-bottom: 1rem;
 	}
+
+
 }
 
 .c-teaser-home{
 	.c-lead{
 		margin-bottom: 0.5rem;
 	}
+
+	a{
+		color: #1A08F5;
+	}
+
+	.c-icon::before,
+	.c-icon::after {
+		content:'';
+		position: absolute;
+		background-image:url(../../images/arrow_blue.svg);
+		background-repeat: no-repeat;
+	}
+
 }
 
 .c-container-postlisting{
