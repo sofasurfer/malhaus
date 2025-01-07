@@ -5,6 +5,7 @@ $title    = $options['company']['company_title'];
 $address  = $options['company']['company_address'];
 $phone    = apply_filters( 'c_get_option', 'company_phone' );
 $email    = apply_filters( 'c_get_option', 'company_email' );
+$maplink    = apply_filters( 'c_get_option', 'company_map_link' );
 $socialmedia_accounts   = apply_filters( 'c_get_option', 'socialmedia_accounts' );
 ?>
 
@@ -16,8 +17,13 @@ $socialmedia_accounts   = apply_filters( 'c_get_option', 'socialmedia_accounts' 
         <div class="c-row">
             <div class="c-col-4 c-text-padding-var">
                 <?= $title ?><br/>
-                <?= $address ?><br/>
+                <?php if( !empty($maplink) ): ?>
+                    <a href="<?= $maplink; ?>" target="_blank"><?= $address ?><br/></a><br/>
+                <?php else: ?>
+                    <?= $address ?><br/>
+                <?php endif; ?>
                 <a href="mailto:<?= $email ?>"><?= $email ?></a>
+
             </div>
 
             <div class="c-col-4 c-text-padding-var c-form-item">

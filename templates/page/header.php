@@ -83,7 +83,7 @@
     <!-- offcanvas nav-->
     <nav id="c-offcanvas-nav" class="c-offcanvas-nav">
         <a href="#" class="c-offcanvas-trigger c-offcanvas-trigger-close">
-            <img src="<?= get_stylesheet_directory_uri(); ?>/images/hamburger.svg" />
+            <img src="<?= get_stylesheet_directory_uri(); ?>/images/menu_close.svg" />
         </a>
         <div class="c-offcanvas-inner">
             <div class="c-container-wide c-offcanvas-header c-line-top c-line-bottom">
