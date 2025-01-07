@@ -21,7 +21,11 @@ $posts = apply_filters( 'get_post_listings', $site_element);
 			if(empty($color)){
 				$color       = get_field('bgcolor',$post);
 			}
-			$image      = get_field('image_teaser',$post);
+			if(!empty($site_element['teaser'])){
+				$image      = get_field('image_teaser',$post);
+			}else{
+				$image = null;
+			}
 			if(empty($image)){
 				$image       = get_field('image',$post);
 			}
