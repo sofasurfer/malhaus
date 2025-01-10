@@ -67,6 +67,9 @@
 
 /* header show offcanvas */
 @media only screen and (max-width:1000px) {  
+	body.home header{
+		margin-bottom:2rem;
+	}
 	.c-hide-mobile{
 		display: none;
 	}
