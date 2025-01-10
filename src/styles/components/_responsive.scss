@@ -77,11 +77,17 @@
 		}
 	}
 
+	.c-header-logo{
+		width: 350px;
+		height: auto;
+		margin-left: -2rem;		
+	}
+
 	.c-teaser-posts{
 		margin-left:-2rem;
 		margin-right:-2rem;
 		padding: 1rem 0;
-		// border-radius: 0;
+		border-radius: 0;
 
 		article{
 			padding-top: 2rem;
