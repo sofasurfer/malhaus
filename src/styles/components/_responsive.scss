@@ -70,7 +70,9 @@
 	.c-hide-mobile{
 		display: none;
 	}
-
+	.c-header{
+		height: auto;
+	}
 	.c-teaser-home{
 		h3.c-title-small{
 			margin-top: 2rem;
@@ -78,9 +80,9 @@
 	}
 
 	.c-header-logo{
-		width: 350px;
+		width: 250px;
 		height: auto;
-		margin-left: -2rem;		
+		margin-left: -1.7rem;		
 	}
 
 	.c-teaser-posts{
