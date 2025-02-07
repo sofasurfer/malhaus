@@ -27,8 +27,14 @@ $socialmedia_accounts   = apply_filters( 'c_get_option', 'socialmedia_accounts' 
             </div>
 
             <div class="c-col-4 c-text-padding-var c-form-item">
+                <?php
+                $newsletter_formid      = apply_filters( 'c_get_option', 'newsletter_form' );
+                echo do_shortcode('[contact-form-7 id="'.$newsletter_formid.'" title="Newsletter" ]'); 
+                ?>
+                <!--
                 <input class="c-newsletter" type="email" placeholder="<?= __("Newsletter abonnieren","neofluxe");?>" >
                 <p><a href=""><?= __("senden","neofluxe");?></a></p>
+                -->
             </div>
 
             <div class="c-col-4 c-text-right c-text-padding-var">
