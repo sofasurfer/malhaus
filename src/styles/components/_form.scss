@@ -19,6 +19,34 @@ input:-webkit-autofill:active {
 	-webkit-transition-delay: 2000s;
 }
 
+.wpcf7-submit{
+    background: none;
+    border: none;
+    color:white;
+
+    &:hover{
+        text-decoration: underline;
+    }
+}
+.wpcf7-response-output{
+    border-color: white!important;
+    border-width: 1px!important;
+    margin:0!important;
+
+    display:none;
+}
+.wpcf7-form.sent {
+    input{
+        display: none;
+    }
+    .wpcf7-response-output{
+        display:block;
+    }
+}
+
+
+
+
 .c-form-item {
 	position: relative;
 	width: 100%;
