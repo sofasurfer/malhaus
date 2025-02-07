@@ -73,6 +73,9 @@
 	.c-hide-mobile{
 		display: none;
 	}
+	.c-hide-desktop{
+		display: block;
+	}
 	.c-header{
 		height: auto;
 	}
@@ -95,7 +98,7 @@
 		border-radius: 0;
 
 		article{
-			padding-top: 2rem;
+			padding-top: 0;
 		}
 
 		&.large{

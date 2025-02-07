@@ -3,10 +3,9 @@
    ========================================================================== */
 
 .c-offcanvas-trigger {
-	position: fixed;
+	position: relative;
 	display: block;
-	top: 2.2rem;
-	right: 2rem;
+	width:55px;
 	// right: $grid-container;
     // right: var(--grid-container);
 	// width: auto;
@@ -18,8 +17,9 @@
 	overflow: hidden;
 	z-index: 99;
 
-	img{
-		height: 45px;
+
+	svg:hover .st0{
+		fill: #6EEBFD;
 	}
 }
 
@@ -29,6 +29,9 @@
 
 .c-offcanvas-trigger-close{
 	display:none;
+	position:absolute;
+	right: 50px;
+	top: 55px;
 }
 
 /* ==========================================================================
@@ -143,10 +146,18 @@
 	}
 	
 	.c-offcanvas-trigger-open {
-		display: none;
+		// display: none;
 	}
 	.c-offcanvas-trigger-close{
 		display: block;
+	}
+
+}
+
+@media only screen and (max-width:600px) { 
+
+	.c-offcanvas{
+		margin-right: -1rem;
 	}
 
 }
