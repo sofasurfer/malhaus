@@ -33,6 +33,20 @@
     padding-right: $spacing-s;
     padding-left: 0;
     padding-right: var(--spacing-s);
+	margin-top: 50px;
+
+	svg{
+		width:85px;
+		height: 85px;
+	}
+
+	svg:hover .cls-2 {
+		fill: #6EEBFD;
+	}
+}
+
+.c-hide-desktop{
+	display: none;
 }
 
 /* ==========================================================================
