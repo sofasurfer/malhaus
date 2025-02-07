@@ -98,8 +98,8 @@
                     <img class="c-hide-desktop" src="<?=  do_shortcode("[c_option key='logo_image_mobile']"); ?>" alt="<?=  do_shortcode("[c_option key='company_title']"); ?>" />
                 </a>
             </div>
-
             <div class="c-offcanvas">
+            
                 <!-- offcanvas trigger-->
                 <a href="#open-navigation" class="c-offcanvas-trigger c-offcanvas-trigger-open">
                     <svg id="Ebene_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 96.5 75.5">
@@ -326,11 +326,8 @@
             </svg>
         </a>
         <div class="c-offcanvas-inner">
-            <div class="c-container-wide c-offcanvas-header c-line-top c-line-bottom">
-                <div class="c-container c-container-no-padding c-header-inner">
-                    <!-- offcanvas trigger-->
-
-                </div>
+            <div class="c-container c-languages">
+                <?= do_shortcode('[c_post_languages ulclass="c-header-lang-list" ]'); ?>
             </div>
 
             <div class="c-container c-offcanvas-content">

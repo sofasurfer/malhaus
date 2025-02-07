@@ -51,6 +51,8 @@ class general {
 		add_shortcode( 'c_option', [ $this, 'c_shortcode_option' ] );
 		add_shortcode( 'c_contact_info', [ $this, 'c_shortcode_contact_info' ] );
 
+		add_shortcode( 'c_post_languages', [$this, 'c_post_languages'] );
+
 		add_filter( 'c_get_pagetitle', [ $this, 'c_get_pagetitle' ] );
 		add_filter( 'c_convert_phone_number', [ $this, 'c_convert_phone_number' ] );
 		add_filter( 'c_get_ogobj', [ $this, 'c_get_ogobj' ] );
@@ -582,6 +584,26 @@ class general {
 		}
 
 		return $icon_class;
+	}    
+	
+	/*
+	Creates language switch
+	*/
+	public function c_post_languages($args){
+		$lswitch = "";
+		$languages = icl_get_languages('skip_missing=1');
+		if(1 < count($languages)){
+			$lswitch = '<ul class="'.$args['ulclass'].'">';
+			foreach($languages as $l){
+				if( $l['active'] == 1 ){
+					$lswitch .=  '<li><a class="c-active" href="'.$l['url'].'">'.strtoupper($l['code']).'</a></li>';
+				}else{
+					$lswitch .=  '<li><a href="'.$l['url'].'">'.strtoupper($l['code']).'</a></li>';
+				}
+			}
+			$lswitch .= '</ul>';
+		}
+		return $lswitch;
 	}
 
 }

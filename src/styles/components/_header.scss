@@ -53,6 +53,23 @@
    lang 
    ========================================================================== */
 
+
+.c-languages{
+	margin-top: 4rem;
+	padding-bottom: 0px;
+	a{
+		color:$color-highlight;
+		&:hover{
+			text-decoration: underline;
+		}
+		&.c-active{
+			text-decoration: underline;
+		}
+	}
+}
+
+
+
 .c-header-lang-list {
     margin: 0;
     padding: 0;
