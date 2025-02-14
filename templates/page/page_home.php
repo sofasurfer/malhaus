@@ -61,6 +61,7 @@
             'posts_per_page' => 1,      // Limit to 1 post
             'orderby'        => 'date', // Order by date
             'order'          => 'DESC', // Latest post first
+            'suppress_filters' => false
         );
 
         $latest_posts = get_posts( $args );

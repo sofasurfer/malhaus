@@ -13,9 +13,9 @@ $posts = apply_filters( 'get_post_listings', $site_element);
 			if(empty($lead)){
 				$lead       = get_field('lead',$post);
 			}
-			$text       = get_field('text_teaser',$post);
+			$text       = get_field('text',$post);
 			if(empty($text)){
-				$text       = get_field('text',$post);
+				$text       = get_field('text_teaser',$post);
 			}
 			$color	    = get_field('bgcolor_teaser',$post);
 			if(empty($color)){
