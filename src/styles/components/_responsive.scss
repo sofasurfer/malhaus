@@ -88,7 +88,17 @@
 	.c-header-logo{
 		width: 250px;
 		height: auto;
-		margin-left: -1.2rem;		
+		margin-left: -2rem;		
+	}
+	.c-container-wide{
+		&.c-main-title-img{
+			padding: 0 1rem;
+		}
+	}
+
+	.c-offcanvas-trigger-close{
+		right:20px;
+		top: 40px;
 	}
 
 	.c-teaser-posts{
