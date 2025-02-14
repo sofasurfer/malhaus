@@ -14,9 +14,7 @@ $posts = apply_filters( 'get_post_listings', $site_element);
 				$lead       = get_field('lead',$post);
 			}
 			$text       = get_field('text',$post);
-			if(empty($text)){
-				$text       = get_field('text_teaser',$post);
-			}
+
 			$color	    = get_field('bgcolor_teaser',$post);
 			if(empty($color)){
 				$color       = get_field('bgcolor',$post);
@@ -44,6 +42,9 @@ $posts = apply_filters( 'get_post_listings', $site_element);
 			$link		= get_permalink($post);
 		}
 		if( !empty($site_element['teaser'])  ):
+			if(!empty(get_field('text_teaser',$post))){
+				$text       = get_field('text_teaser',$post);
+			}
 		?>
 		<div class="c-teaser-posts <?= ($counter % 2 == 0)?'left':'right';?>" style="background-color:<?= $color;?>;">
 			<div class="c-container">
