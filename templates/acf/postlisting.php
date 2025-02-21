@@ -9,9 +9,9 @@ $posts = apply_filters( 'get_post_listings', $site_element);
 		if( get_post_type($post) == 'offer' ){
 
 			$title      = $post->post_title;
-			$lead       = get_field('lead_teaser',$post);
+			$lead       = get_field('lead',$post);
 			if(empty($lead)){
-				$lead       = get_field('lead',$post);
+				$lead       = get_field('lead_teaser',$post);
 			}
 			$text       = get_field('text',$post);
 
@@ -44,6 +44,9 @@ $posts = apply_filters( 'get_post_listings', $site_element);
 		if( !empty($site_element['teaser'])  ):
 			if(!empty(get_field('text_teaser',$post))){
 				$text       = get_field('text_teaser',$post);
+			}
+			if(!empty( get_field('lead_teaser',$post)) ){
+				$lead       = get_field('lead_teaser',$post);
 			}
 		?>
 		<div class="c-teaser-posts <?= ($counter % 2 == 0)?'left':'right';?>" style="background-color:<?= $color;?>;">
